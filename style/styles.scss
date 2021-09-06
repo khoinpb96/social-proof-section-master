@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+$main-color1: hsl(300, 43%, 22%);
+$main-color2: hsl(333, 80%, 67%);
+$dark-magenta: hsl(303, 10%, 53%);
+$light-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  user-select: none;
+}
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 5rem auto;
+  .row {
+    display: flex;
+    margin-bottom: 4rem;
+    justify-content: space-between;
+  }
+}
+
+.col1 {
+  width: 43%;
+  h1 {
+    color: $main-color1;
+    font-size: 2.3rem;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-weight: 500;
+    color: hsl(303, 10%, 53%);
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
+.col2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .rating {
+    display: flex;
+    width: 70%;
+    background: $light-magenta;
+    margin: 8px;
+    min-width: 300px;
+    line-height: 2.5rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    p {
+      color: $main-color1;
+      font-weight: 800;
+    }
+    .stars {
+      padding: 0 1.5rem;
+      color: #e09b5d;
+    }
+  }
+}
+
+.customer {
+  background: $main-color1;
+  color: $white;
+  width: 30%;
+  border-radius: 8px;
+  padding: 2rem;
+  font-size: 0.65rem;
+  span {
+    color: #bf477c;
+    font-weight: 500;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &__ava {
+    border-radius: 50%;
+    width: 36px;
+    margin-right: 0.8rem;
+  }
+  &__comments {
+    color: hsl(300, 24%, 96%);
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+}
+
+.rt1 {
+  margin-right: auto !important;
+}
+.rt3 {
+  margin-left: auto !important;
+}
+
+.cus1 {
+  transform: translateY(-1rem);
+}
+.cus3 {
+  transform: translateY(1rem);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    .col {
+      width: 100%;
+      .rt1 {
+        margin: 0;
+      }
+      .rt3 {
+        margin: 0;
+      }
+      .rating {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+      }
+    }
+    .col1 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .customer {
+      width: 100%;
+      padding: 2rem;
+      &__ava {
+        width: 50px;
+      }
+      &__title {
+        font-size: 0.9rem;
+      }
+      &__comments {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
